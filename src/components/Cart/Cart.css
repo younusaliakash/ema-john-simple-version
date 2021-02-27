@@ -1,0 +1,28 @@
+.cart{
+    text-align: center;
+}
+.cart table{
+    text-align: left;
+}
+table td:first-child{
+    padding-right: 60px;
+    font-size: 16px;
+}
+table td:last-child{
+    text-align: right;
+    font-size: 16px;   
+}
+.grand-total{
+    font-size: 20px;
+    font-weight: 600;
+    color: brown;
+}
+.review-btn{
+    margin-top: 5px;
+    width: 200px;
+    height: 30px;
+    background-color: goldenrod;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid gray;
+}
