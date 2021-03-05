@@ -3,8 +3,8 @@ import './Cart.css'
 
 const Cart = (props) => {
     const cart= props.cart
-
-    const total = cart.reduce((total , product) => total + product.price, 0)
+    // console.log(cart)
+    const total = cart.reduce((total , product) => total + product.price * product.quantity, 0)
 
     const newTotal = toDecimal(total)
 
@@ -25,6 +25,8 @@ const Cart = (props) => {
             <h3>Order Summary</h3>
             <p>Ordered Items : {cart.length}</p>
             <table>
+                <thead></thead>
+                <tbody>
                 <tr>
                     <td><small>Products Price:</small></td>
                     <td><small>${newTotal}</small></td>
@@ -41,8 +43,12 @@ const Cart = (props) => {
                     <td>Order Total: </td>
                     <td>${grandTotal}</td>
                 </tr>
+                </tbody>
+                <tfoot></tfoot>
             </table>
-            <button className="review-btn">Review your Order</button>
+            {
+                props.children
+            }
             
 
         </div>
